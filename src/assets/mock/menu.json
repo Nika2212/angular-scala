@@ -1,0 +1,84 @@
+[
+  {
+      "name": "dashboard",
+      "route" : "dashboard",
+      "icon" : "dashboard",
+      "expanded" : false,
+      "permission" : [],
+      "children" : null
+  },
+  {
+    "name": "players",
+    "route" : "players",
+    "icon" : "people_alt",
+    "expanded" : false,
+    "permission" : [],
+    "children" : null
+  },
+  {
+    "name": "events",
+    "route" : "events",
+    "icon" : "calendar_today",
+    "expanded" : false,
+    "permission" : [],
+    "children" : null
+  },
+  {
+    "name": "leagues",
+    "route" : null,
+    "icon" : "inbox",
+    "expanded" : false,
+    "permission" : [],
+    "children" : [
+      {
+        "name": "odds management",
+        "route" : "leagues",
+        "icon" : null,
+        "expanded" : false,
+        "permission" : [],
+        "children" : null
+      },
+      {
+        "name": "union leagues",
+        "route" : "union-leagues",
+        "icon" : null,
+        "expanded" : false,
+        "permission" : [],
+        "children" : [
+          {
+            "name": "bonus 1",
+            "route" : null,
+            "icon" : null,
+            "expanded" : false,
+            "permission" : [],
+            "children" : null
+          },
+          {
+            "name": "bonus 2",
+            "route" : null,
+            "icon" : null,
+            "expanded" : false,
+            "permission" : [],
+            "children" : null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "bonus",
+    "route" : null,
+    "icon" : "archive",
+    "expanded" : false,
+    "permission" : [],
+    "children" : []
+  },
+  {
+    "name": "category",
+    "route" : "category",
+    "icon" : "view_module",
+    "expanded" : false,
+    "permission" : [],
+    "children" : null
+  }
+]

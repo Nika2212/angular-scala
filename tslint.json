@@ -12,13 +12,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "bs",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "bs",
       "kebab-case"
     ],
     "import-blacklist": [
@@ -29,17 +29,17 @@
     "max-classes-per-file": false,
     "max-line-length": [
       true,
-      140
+      240
     ],
     "member-access": false,
     "member-ordering": [
       true,
       {
         "order": [
-          "static-field",
           "instance-field",
-          "static-method",
-          "instance-method"
+          "static-field",
+          "instance-method",
+          "static-method"
         ]
       }
     ],
@@ -54,7 +54,7 @@
     ],
     "no-empty": false,
     "no-inferrable-types": [
-      true,
+      false,
       "ignore-params"
     ],
     "no-non-null-assertion": true,

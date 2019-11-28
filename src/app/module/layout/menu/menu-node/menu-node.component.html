@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<ul #childrenContainerRef>
+    <li *ngFor="let route of children" [ngClass]="{'expanded' : route.expanded}">
+        <a [attr.href]="route.children ? null : route.route" (click)="onToggle(route)" [ngStyle]="{'padding-left.px' : padding}">
+            <i *ngIf="route.icon" class="material-icons">{{ route.icon }}</i>
+            <span>{{ route.name }}</span>
+            <small *ngIf="route.children" class="material-icons">keyboard_arrow_down</small>
+        </a>
+        <bs-menu-node bs-stop-propagation [expanded]="route.expanded" [children]="route.children" [padding]="padding + 15"></bs-menu-node>
+    </li>
+</ul>

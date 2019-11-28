@@ -1,1 +1,54 @@
-<p>auth works!</p>
+<section class="auth-section">
+    <div class="brand">
+        <img [src]="images + 'brand.png'" alt="BetSolutions Sportbook">
+    </div>
+
+    <form #signInFormRef="ngForm" (ngSubmit)="onSubmit()" class="auth-form">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Sign In</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content>
+                <mat-form-field>
+                    <input
+                        #userUsernameInputRef="ngModel"
+                        matInput
+                        placeholder="Username"
+                        name="username"
+                        required
+                        minlength="4"
+                        maxlength="255"
+                        autofocus
+                        autocomplete="off"
+                        [(ngModel)]="userCredentials.user"
+                    >
+                </mat-form-field>
+                <mat-form-field>
+                    <input
+                        #userPasswordInputRef="ngModel"
+                        matInput
+                        placeholder="Password"
+                        type="password"
+                        name="password"
+                        required
+                        minlength="6"
+                        maxlength="255"
+                        [(ngModel)]="userCredentials.password">
+                </mat-form-field>
+                <mat-checkbox
+                    color="primary"
+                    name="remember"
+                    [(ngModel)]="userCredentials.remember">
+
+                    Remember Me</mat-checkbox>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-actions>
+                <div class="auth-action row-end-center">
+                    <button type="submit" mat-button color="primary">Sign In</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</section>

@@ -1,0 +1,95 @@
+.application-menu {
+    width: 260px;
+    height: 100%;
+
+    background-color: #303030;
+
+    border-right: 1px solid #1e1e1e;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    box-shadow: 3px 0 6px rgba(0, 0, 0, .3);
+}
+.application-menu .brand {
+    padding-top: 30px;
+
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.application-menu .menu-list {
+    margin-top: 30px;
+
+    width: 100%;
+    height: auto;
+
+    border-top: 1px solid #1e1e1e;
+    border-bottom: 1px solid #1e1e1e;
+}
+.application-menu .menu-list li {
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    border-bottom: 1px solid #1e1e1e;
+}
+.application-menu .menu-list li:last-child {
+    border-bottom: none;
+}
+.application-menu .menu-list li.expanded a {
+    border-left-color: #00a4e2;
+}
+.application-menu .menu-list li.expanded a i {
+    color: #00a4e2;
+}
+.application-menu .menu-list li.expanded a small {
+    transform: rotate(180deg);
+}
+.application-menu .menu-list li a {
+    padding-left: 12px;
+    padding-right: 15px;
+
+    width: 100%;
+    height: 44px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    border-left: 3px solid transparent;
+
+    background-color: #252525;
+
+    cursor: pointer;
+    user-select: none;
+}
+.application-menu .menu-list li a i {
+    margin-right: 10px;
+
+    max-width: 21px;
+
+    font-size: 21px;
+    color: #fafafa;
+}
+.application-menu .menu-list li a span {
+    padding-top: 1px;
+
+    color: #fafafa;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.application-menu .menu-list li a small {
+    margin-left: auto;
+    margin-right: 0;
+
+    font-size: 16px;
+    color: #fafafa;
+}

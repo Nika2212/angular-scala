@@ -1,1 +1,15 @@
-<p>menu works!</p>
+<aside class="application-menu">
+    <div class="brand">
+        <img [src]="images + 'brand.png'" alt="">
+    </div>
+    <ul class="menu-list">
+        <li *ngFor="let route of menuList" [ngClass]="{'expanded' : route.expanded}">
+            <a [attr.href]="route.children ? null : route.route" (click)="onToggle(route)">
+                <i *ngIf="route.icon" class="material-icons">{{ route.icon }}</i>
+                <span>{{ route.name }}</span>
+                <small *ngIf="route.children" class="material-icons">keyboard_arrow_down</small>
+            </a>
+            <bs-menu-node bs-stop-propagation [expanded]="route.expanded" [children]="route.children" [padding]="30"></bs-menu-node>
+        </li>
+    </ul>
+</aside>
